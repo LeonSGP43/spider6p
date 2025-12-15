@@ -9,6 +9,7 @@ import {
   LinkedInSpider,
   RedditSpider
 } from './src/platforms/index.js';
+import { requestCounter } from './src/utils/http.js';
 
 const spiders = {
   tiktok: new TikTokSpider(),
@@ -76,6 +77,16 @@ async function crawlAll() {
       : 'N/A';
     console.log(`[${status}] ${platform.toUpperCase()}: ${counts}`);
   }
+
+  // 打印 API 调用统计
+  const apiStats = requestCounter.getSummary();
+  console.log('\n' + '-'.repeat(60));
+  console.log('API CALL STATISTICS');
+  console.log('-'.repeat(60));
+  console.log(`📊 Total API Calls: ${apiStats.total}`);
+  console.log(`   ✓ Success: ${apiStats.success}`);
+  console.log(`   ✗ Failed: ${apiStats.failed}`);
+  console.log('-'.repeat(60));
 
   // 保存数据到 JSON 文件
   await saveResults(summary);

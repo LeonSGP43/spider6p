@@ -1,6 +1,25 @@
 import axios from 'axios';
 import { config } from '../../config.js';
 
+// 全局请求计数器
+export const requestCounter = {
+  total: 0,
+  success: 0,
+  failed: 0,
+  reset() {
+    this.total = 0;
+    this.success = 0;
+    this.failed = 0;
+  },
+  getSummary() {
+    return {
+      total: this.total,
+      success: this.success,
+      failed: this.failed
+    };
+  }
+};
+
 export const createHttpClient = () => {
   const client = axios.create({
     baseURL: config.tikhub.baseUrl,
@@ -13,6 +32,7 @@ export const createHttpClient = () => {
 
   client.interceptors.request.use(
     (cfg) => {
+      requestCounter.total++;
       console.log(`[HTTP] ${cfg.method?.toUpperCase()} ${cfg.url}`);
       return cfg;
     },
@@ -20,8 +40,12 @@ export const createHttpClient = () => {
   );
 
   client.interceptors.response.use(
-    (response) => response,
+    (response) => {
+      requestCounter.success++;
+      return response;
+    },
     (error) => {
+      requestCounter.failed++;
       console.error(`[HTTP] Error: ${error.response?.status || error.message}`);
       return Promise.reject(error);
     }
