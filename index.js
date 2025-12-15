@@ -11,12 +11,12 @@ import {
 } from './src/platforms/index.js';
 
 const spiders = {
-  // tiktok: new TikTokSpider(),
-  // instagram: new InstagramSpider(),
-  // twitter: new TwitterSpider(),
-  // youtube: new YouTubeSpider(),
+  tiktok: new TikTokSpider(),
+  instagram: new InstagramSpider(),
+  twitter: new TwitterSpider(),
+  youtube: new YouTubeSpider(),
   linkedin: new LinkedInSpider(),
-  // reddit: new RedditSpider()
+  reddit: new RedditSpider()
 };
 
 async function crawlAll() {

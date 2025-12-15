@@ -5,41 +5,88 @@ export class RedditSpider extends BasePlatformSpider {
     super('Reddit');
   }
 
+  // 使用 Reddit APP API: fetch_dynamic_search
   async searchByTag(tag, limit = 20) {
-    const response = await this.http.get('/api/v1/reddit/web/search_posts', {
-      params: { keyword: tag, limit: limit, sort: 'relevance' }
+    const response = await this.http.get('/api/v1/reddit/app/fetch_dynamic_search', {
+      params: { query: tag }
     });
-    if (response.data?.code !== 0) throw new Error(response.data?.message || 'Reddit API error');
-    return response.data?.data?.children || response.data?.data || [];
+    const code = response.data?.code;
+    if (code !== 0 && code !== 200) throw new Error(response.data?.message || 'Reddit API error');
+    
+    // 实际返回结构: data.search.dynamic.components.main.edges[].node.children[]
+    const edges = response.data?.data?.search?.dynamic?.components?.main?.edges || [];
+    const posts = [];
+    for (const edge of edges) {
+      const children = edge.node?.children || [];
+      for (const child of children) {
+        if (child.__typename === 'SearchPost' && child.post) {
+          posts.push(child.post);
+        }
+      }
+    }
+    return posts.slice(0, limit);
   }
 
   normalizeContent(rawData) {
-    const item = rawData.data || rawData;
+    const post = rawData;
+    const author = post.authorInfo || {};
+    const stats = post.score || {};
+    const subreddit = post.subreddit || {};
+    
     return {
       platform: 'reddit',
-      id: item.id || item.name,
-      type: item.is_video ? 'video' : 'post',
+      id: post.id,
+      type: post.media?.isGif ? 'gif' : (post.media?.videoInfo ? 'video' : 'post'),
       content: {
-        title: item.title || '',
-        text: item.selftext || '',
-        url: `https://www.reddit.com${item.permalink}`,
-        mediaUrl: item.url || item.thumbnail || '',
-        subreddit: item.subreddit || ''
+        title: post.postTitle || '',
+        text: post.content?.markdown || post.content?.html || '',
+        url: post.url || '',
+        subreddit: subreddit.name || '',
+        subredditId: subreddit.id || ''
       },
       author: {
-        id: item.author_fullname || '',
-        username: item.author || '',
-        nickname: item.author || ''
+        id: author.id,
+        username: author.name || '',
+        avatar: author.snoovatarIcon?.url || ''
       },
       stats: {
-        upvotes: item.ups || item.score || 0,
-        downvotes: item.downs || 0,
-        comments: item.num_comments || 0,
-        awards: item.total_awards_received || 0,
-        ratio: item.upvote_ratio || 0
+        upvotes: stats.upvotes || 0,
+        downvotes: stats.downvotes || 0,
+        score: stats.score || 0,
+        comments: post.commentCount || 0
       },
-      createdAt: item.created_utc ? new Date(item.created_utc * 1000).toISOString() : null,
-      rawData: item
+      createdAt: post.createdAt || null,
+      rawData
     };
+  }
+
+  // 获取帖子详情
+  async getPostDetails(postId) {
+    const response = await this.http.get('/api/v1/reddit/app/fetch_post_details', {
+      params: { post_id: postId }
+    });
+    const code = response.data?.code;
+    if (code !== 0 && code !== 200) throw new Error(response.data?.message || 'Reddit API error');
+    return response.data?.data;
+  }
+
+  // 获取帖子评论
+  async getPostComments(postId) {
+    const response = await this.http.get('/api/v1/reddit/app/fetch_post_comments', {
+      params: { post_id: postId }
+    });
+    const code = response.data?.code;
+    if (code !== 0 && code !== 200) throw new Error(response.data?.message || 'Reddit API error');
+    return response.data?.data;
+  }
+
+  // 获取版块内容
+  async getSubredditFeed(subreddit, sort = 'hot') {
+    const response = await this.http.get('/api/v1/reddit/app/fetch_subreddit_feed', {
+      params: { subreddit, sort }
+    });
+    const code = response.data?.code;
+    if (code !== 0 && code !== 200) throw new Error(response.data?.message || 'Reddit API error');
+    return response.data?.data;
   }
 }
