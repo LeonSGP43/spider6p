@@ -15,6 +15,7 @@ yarn.lock
 trends_*.json
 multiplatform_trends_*.json
 *.json.bak
+output/
 
 # IDE
 .vscode/
