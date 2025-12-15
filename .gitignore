@@ -1,0 +1,38 @@
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# 输出文件
+trends_*.json
+multiplatform_trends_*.json
+*.json.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 日志
+logs/
+*.log
+
+# 临时文件
+tmp/
+temp/
+.cache/
+
+# OS
+Thumbs.db
+.DS_Store
