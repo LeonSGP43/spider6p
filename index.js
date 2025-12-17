@@ -10,6 +10,7 @@ import {
   RedditSpider
 } from './src/platforms/index.js';
 import { requestCounter } from './src/utils/http.js';
+import { kafkaProducer } from './src/utils/kafka-producer.js';
 
 const spiders = {
   tiktok: new TikTokSpider(),
@@ -90,6 +91,20 @@ async function crawlAll() {
 
   // 保存数据到 JSON 文件
   await saveResults(summary);
+
+  // 推送数据到 Kafka
+  console.log('\n' + '-'.repeat(60));
+  console.log('KAFKA PUSH');
+  console.log('-'.repeat(60));
+  const kafkaResult = await kafkaProducer.sendCrawlResults(summary);
+  if (kafkaResult.success) {
+    console.log(`✓ Kafka: 已推送 ${kafkaResult.sent} 条数据`);
+  } else {
+    console.log(`✗ Kafka: 推送失败 - ${kafkaResult.error || '未配置或连接失败'}`);
+  }
+
+  // 断开 Kafka 连接
+  await kafkaProducer.disconnect();
 
   return summary;
 }
