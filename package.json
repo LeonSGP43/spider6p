@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "server": "node server.js",
+    "mock": "node mock-send-kafka.js",
     "test": "node test.js"
   },
   "dependencies": {
