@@ -174,18 +174,21 @@ class KafkaProducerClient {
             
             // 帖子数据
             post_id: post.id || post.aweme_id || post.video_id || null,
-            author: post.author || post.user || null,
-            description: post.desc || post.description || post.title || '',
+            author: post.author?.username || post.author || post.user || null,
+            description: post.content?.title || post.desc || post.description || post.title || '',
             
-            // 互动数据
-            views: post.statistics?.play_count || post.play_count || post.views || 0,
-            likes: post.statistics?.digg_count || post.digg_count || post.likes || 0,
-            comments: post.statistics?.comment_count || post.comment_count || post.comments || 0,
-            shares: post.statistics?.share_count || post.share_count || post.shares || 0,
-            saves: post.statistics?.collect_count || post.collect_count || post.saves || 0,
+            // 互动数据 - 支持多种数据格式
+            // 格式1: post.stats.views (spider6p 标准格式)
+            // 格式2: post.statistics.play_count (TikHub 原始格式)
+            // 格式3: post.views (扁平格式)
+            views: post.stats?.views || post.statistics?.play_count || post.play_count || post.views || 0,
+            likes: post.stats?.likes || post.statistics?.digg_count || post.digg_count || post.likes || 0,
+            comments: post.stats?.comments || post.statistics?.comment_count || post.comment_count || post.comments || 0,
+            shares: post.stats?.shares || post.statistics?.share_count || post.share_count || post.shares || 0,
+            saves: post.stats?.saves || post.statistics?.collect_count || post.collect_count || post.saves || 0,
             
             // 时间戳
-            created_at: post.create_time || post.created_at || null,
+            created_at: post.createdAt || post.create_time || post.created_at || null,
             crawled_at: timestamp,
             
             // 原始数据 (可选)
