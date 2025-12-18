@@ -17,7 +17,7 @@ const spiders = {
   instagram: new InstagramSpider(),
   twitter: new TwitterSpider(),
   youtube: new YouTubeSpider(),
-  linkedin: new LinkedInSpider(),
+  // linkedin: new LinkedInSpider(),
   reddit: new RedditSpider()
 };
 

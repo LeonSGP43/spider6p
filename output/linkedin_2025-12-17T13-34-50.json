@@ -1,0 +1,777 @@
+{
+  "platform": "LinkedIn",
+  "success": true,
+  "data": {
+    "music": [
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_ip2ujadiye",
+        "type": "profile",
+        "content": {
+          "title": "GIS specialist",
+          "url": "",
+          "location": "Hanoi"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQEChruf9sGN1w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691491657639?e=1767830400&v=beta&t=KYvIL1Jj48kGydk6caq5T4SS39eT-0nzcWzYdFWxfZw",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "GIS specialist",
+          "location": "Hanoi",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQEChruf9sGN1w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691491657639?e=1767830400&v=beta&t=KYvIL1Jj48kGydk6caq5T4SS39eT-0nzcWzYdFWxfZw",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_6n9k1y9s3oe",
+        "type": "profile",
+        "content": {
+          "title": "HR Administrator Specialist",
+          "url": "",
+          "location": "Hanoi Capital Region"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQHkWSAm-4pIYQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1700450304106?e=1767830400&v=beta&t=BCjkwb7XEmD51Sl7U7upcsiLKipp_zy1FCDrf_HXsLc",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "HR Administrator Specialist",
+          "location": "Hanoi Capital Region",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQHkWSAm-4pIYQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1700450304106?e=1767830400&v=beta&t=BCjkwb7XEmD51Sl7U7upcsiLKipp_zy1FCDrf_HXsLc",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_ek1ydufnzgt",
+        "type": "profile",
+        "content": {
+          "title": "Software Engineer",
+          "url": "",
+          "location": "Hanoi Capital Region"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGDj0890Jv9AQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1729735272148?e=1767830400&v=beta&t=yhxIG4MhYj74eYEv1XfNW7xwjv5s0fVMrv5Uke2VX7w",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Software Engineer",
+          "location": "Hanoi Capital Region",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGDj0890Jv9AQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1729735272148?e=1767830400&v=beta&t=yhxIG4MhYj74eYEv1XfNW7xwjv5s0fVMrv5Uke2VX7w",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_9vo1wgf2mg7",
+        "type": "profile",
+        "content": {
+          "title": "HR Assistant",
+          "url": "",
+          "location": "Hai Bà Trưng district"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D4D03AQGEDpZzFTvW1w/profile-displayphoto-shrink_100_100/B4DZWlBcHuG8Ac-/0/1742230385779?e=1767830400&v=beta&t=ecmiPjBMYivnXvsJsQvtTQ8iu1RmK8MhUIWgNh6ASzw",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "HR Assistant",
+          "location": "Hai Bà Trưng district",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 99,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D4D03AQGEDpZzFTvW1w/profile-displayphoto-shrink_100_100/B4DZWlBcHuG8Ac-/0/1742230385779?e=1767830400&v=beta&t=ecmiPjBMYivnXvsJsQvtTQ8iu1RmK8MhUIWgNh6ASzw",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_oqvbx6btuzq",
+        "type": "profile",
+        "content": {
+          "title": "Founder at Prep",
+          "url": "",
+          "location": "Hanoi"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQFL9Pm1w0QSug/profile-displayphoto-shrink_100_100/B56ZRe1KUuGQAU-/0/1736757782337?e=1767830400&v=beta&t=xN1HdnNLlcIydH45pT_OuRNcLBI_J6z-vnIS8-KPK7U",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Founder at Prep",
+          "location": "Hanoi",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQFL9Pm1w0QSug/profile-displayphoto-shrink_100_100/B56ZRe1KUuGQAU-/0/1736757782337?e=1767830400&v=beta&t=xN1HdnNLlcIydH45pT_OuRNcLBI_J6z-vnIS8-KPK7U",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_k0asypsr4ci",
+        "type": "profile",
+        "content": {
+          "title": "Senior Backend Developer | Technical Lead",
+          "url": "",
+          "location": "Hanoi"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5603AQE2uUgaKZ-Puw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1662600360360?e=1767830400&v=beta&t=YI8JrjVM2GPw9zaIDB2hYJoD51BAVIFdhOi_E3E_Qoc",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Senior Backend Developer | Technical Lead",
+          "location": "Hanoi",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5603AQE2uUgaKZ-Puw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1662600360360?e=1767830400&v=beta&t=YI8JrjVM2GPw9zaIDB2hYJoD51BAVIFdhOi_E3E_Qoc",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_0yyqxury57bm",
+        "type": "profile",
+        "content": {
+          "title": "Strategy & Growth | Business Enthusiast",
+          "url": "",
+          "location": "Hanoi"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGZ0o0VmAmLrQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725553134283?e=1767830400&v=beta&t=Xp8-KAMBFemorvl3SoCPve4supTkJfPvBbXtZOauBwI",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Strategy & Growth | Business Enthusiast",
+          "location": "Hanoi",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQGZ0o0VmAmLrQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725553134283?e=1767830400&v=beta&t=Xp8-KAMBFemorvl3SoCPve4supTkJfPvBbXtZOauBwI",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_71z16odtqaj",
+        "type": "profile",
+        "content": {
+          "title": "Growth",
+          "url": "",
+          "location": "Hanoi"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D4D35AQFCG8xsiPZPUA/profile-framedphoto-shrink_100_100/B4DZijwdUuHYAo-/0/1755094046384?e=1766584800&v=beta&t=4dlemtJkZyTgQjy1aU6SqPqzVUDnUXNsnVgsFjG72Ow",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Growth",
+          "location": "Hanoi",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D4D35AQFCG8xsiPZPUA/profile-framedphoto-shrink_100_100/B4DZijwdUuHYAo-/0/1755094046384?e=1766584800&v=beta&t=4dlemtJkZyTgQjy1aU6SqPqzVUDnUXNsnVgsFjG72Ow",
+              "expires_at": 1766584800000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_0cpvfm1do77",
+        "type": "profile",
+        "content": {
+          "title": "Software Engineer",
+          "url": "",
+          "location": "Hung Yen, Vietnam"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5635AQGSw4dvpnv59g/profile-framedphoto-shrink_100_100/B56Ze9_JugHoAk-/0/1751239138579?e=1766584800&v=beta&t=JLky9YTzMwz_z8JE0NnLykAsEXAdX48Z7Uz6nTAVXMQ",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Software Engineer",
+          "location": "Hung Yen, Vietnam",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5635AQGSw4dvpnv59g/profile-framedphoto-shrink_100_100/B56Ze9_JugHoAk-/0/1751239138579?e=1766584800&v=beta&t=JLky9YTzMwz_z8JE0NnLykAsEXAdX48Z7Uz6nTAVXMQ",
+              "expires_at": 1766584800000
+            }
+          ],
+          "services": []
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "linkedin_1765978470751_w75x5dqkstm",
+        "type": "profile",
+        "content": {
+          "title": "Senior Recruitment Specialist",
+          "url": "",
+          "location": "Hanoi Capital Region"
+        },
+        "author": {
+          "id": null,
+          "username": "",
+          "nickname": "LinkedIn Member",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQG0l2Cv2fifIA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1716309524988?e=1767830400&v=beta&t=Pg_xKyDSnhClKNealW1dykPPHOvRFZtOleYUoMxOdOg",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 0
+        },
+        "rawData": {
+          "id": null,
+          "urn": null,
+          "url": null,
+          "full_name": "LinkedIn Member",
+          "title": "Senior Recruitment Specialist",
+          "location": "Hanoi Capital Region",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQG0l2Cv2fifIA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1716309524988?e=1767830400&v=beta&t=Pg_xKyDSnhClKNealW1dykPPHOvRFZtOleYUoMxOdOg",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": []
+        }
+      }
+    ],
+    "dance": [
+      {
+        "platform": "linkedin",
+        "id": "ACoAABVdd5gBhGbsLIGUKknOWZiyYij3Yi-ycSc",
+        "type": "profile",
+        "content": {
+          "title": "上海依科 - 高级工程师",
+          "url": "https://www.linkedin.com/in/%E5%85%B4%E8%B1%B9-%E6%9D%A8-734062a0",
+          "location": "Yangpu District"
+        },
+        "author": {
+          "id": "ACoAABVdd5gBhGbsLIGUKknOWZiyYij3Yi-ycSc",
+          "username": "%E5%85%B4%E8%B1%B9-%E6%9D%A8-734062a0",
+          "nickname": "杨兴豹",
+          "avatar": "",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "358447000",
+          "urn": "ACoAABVdd5gBhGbsLIGUKknOWZiyYij3Yi-ycSc",
+          "url": "https://www.linkedin.com/in/%E5%85%B4%E8%B1%B9-%E6%9D%A8-734062a0",
+          "public_identifier": "%E5%85%B4%E8%B1%B9-%E6%9D%A8-734062a0",
+          "full_name": "杨兴豹",
+          "title": "上海依科 - 高级工程师",
+          "location": "Yangpu District",
+          "is_premium": false,
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAACGRAyAB2HX7xzOb0sOpeo3_T7fhZxXxhQU",
+        "type": "profile",
+        "content": {
+          "title": "Service Engineer - kannegiesser china",
+          "url": "https://www.linkedin.com/in/bill-zhang-b40721138",
+          "location": "Jiading District"
+        },
+        "author": {
+          "id": "ACoAACGRAyAB2HX7xzOb0sOpeo3_T7fhZxXxhQU",
+          "username": "bill-zhang-b40721138",
+          "nickname": "bill zhang",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5603AQH4h8DA9BvwWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1628984470698?e=1767830400&v=beta&t=PbXKbLujfFGxGoNaC0rTlt01mNO0NnJBBBYj4qkRtZM",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "563151648",
+          "urn": "ACoAACGRAyAB2HX7xzOb0sOpeo3_T7fhZxXxhQU",
+          "url": "https://www.linkedin.com/in/bill-zhang-b40721138",
+          "public_identifier": "bill-zhang-b40721138",
+          "full_name": "bill zhang",
+          "title": "Service Engineer - kannegiesser china",
+          "location": "Jiading District",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5603AQH4h8DA9BvwWA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1628984470698?e=1767830400&v=beta&t=PbXKbLujfFGxGoNaC0rTlt01mNO0NnJBBBYj4qkRtZM",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAACOF-SMBSA1E9MdUlkBt255zOyJHpSlsECs",
+        "type": "profile",
+        "content": {
+          "title": "Project Manager at AkzoNobel",
+          "url": "https://www.linkedin.com/in/%E7%94%B0%E7%BE%A4-ric-tian-42b715147",
+          "location": "Jing'an District"
+        },
+        "author": {
+          "id": "ACoAACOF-SMBSA1E9MdUlkBt255zOyJHpSlsECs",
+          "username": "%E7%94%B0%E7%BE%A4-ric-tian-42b715147",
+          "nickname": "田群 Ric Tian",
+          "avatar": "",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "595982627",
+          "urn": "ACoAACOF-SMBSA1E9MdUlkBt255zOyJHpSlsECs",
+          "url": "https://www.linkedin.com/in/%E7%94%B0%E7%BE%A4-ric-tian-42b715147",
+          "public_identifier": "%E7%94%B0%E7%BE%A4-ric-tian-42b715147",
+          "full_name": "田群 Ric Tian",
+          "title": "Project Manager at AkzoNobel",
+          "location": "Jing'an District",
+          "is_premium": false,
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAAAmqUwQBT52rxBl5R3N6q_kJ8c2llv-_mHU",
+        "type": "profile",
+        "content": {
+          "title": "Vice President of Business Development at Weida Freight System",
+          "url": "https://www.linkedin.com/in/elmen-chu-05838146",
+          "location": "HONG KONG SAR, China"
+        },
+        "author": {
+          "id": "ACoAAAmqUwQBT52rxBl5R3N6q_kJ8c2llv-_mHU",
+          "username": "elmen-chu-05838146",
+          "nickname": "Elmen Chu",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5603AQEq_nFbAiCpEw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1686405088797?e=1767830400&v=beta&t=DbeaG0-4y8pXmaEQ-LNf9YpRUPhU0sR7rpcBTUTjt20",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "162157316",
+          "urn": "ACoAAAmqUwQBT52rxBl5R3N6q_kJ8c2llv-_mHU",
+          "url": "https://www.linkedin.com/in/elmen-chu-05838146",
+          "public_identifier": "elmen-chu-05838146",
+          "full_name": "Elmen Chu",
+          "title": "Vice President of Business Development at Weida Freight System",
+          "location": "HONG KONG SAR, China",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5603AQEq_nFbAiCpEw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1686405088797?e=1767830400&v=beta&t=DbeaG0-4y8pXmaEQ-LNf9YpRUPhU0sR7rpcBTUTjt20",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAABjY0ygBqurxnY6VAvqrVidEPaXIpI6BiFs",
+        "type": "profile",
+        "content": {
+          "title": "上海联净电子科技有限公司",
+          "url": "https://www.linkedin.com/in/%E6%96%8C-%E9%82%B9-208734b7",
+          "location": "Minhang District"
+        },
+        "author": {
+          "id": "ACoAABjY0ygBqurxnY6VAvqrVidEPaXIpI6BiFs",
+          "username": "%E6%96%8C-%E9%82%B9-208734b7",
+          "nickname": "邹斌",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5103AQHOvv5c7-5i5A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1538962651077?e=1767830400&v=beta&t=XNjBhlR-A1SjZULkp3tGzMj5OB86LQMRYU36pNFHZXs",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "416863016",
+          "urn": "ACoAABjY0ygBqurxnY6VAvqrVidEPaXIpI6BiFs",
+          "url": "https://www.linkedin.com/in/%E6%96%8C-%E9%82%B9-208734b7",
+          "public_identifier": "%E6%96%8C-%E9%82%B9-208734b7",
+          "full_name": "邹斌",
+          "title": "上海联净电子科技有限公司",
+          "location": "Minhang District",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5103AQHOvv5c7-5i5A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1538962651077?e=1767830400&v=beta&t=XNjBhlR-A1SjZULkp3tGzMj5OB86LQMRYU36pNFHZXs",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAAB9JkjkBF1gEzw1I67L9fkE2927C85aUzQY",
+        "type": "profile",
+        "content": {
+          "title": "高级工程师 - 北辰（上海）环境科技有限公司",
+          "url": "https://www.linkedin.com/in/%E5%8F%AF%E5%8D%BF-%E5%88%98-4a1962127",
+          "location": "Minhang District"
+        },
+        "author": {
+          "id": "ACoAAB9JkjkBF1gEzw1I67L9fkE2927C85aUzQY",
+          "username": "%E5%8F%AF%E5%8D%BF-%E5%88%98-4a1962127",
+          "nickname": "刘可卿",
+          "avatar": "",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "524915257",
+          "urn": "ACoAAB9JkjkBF1gEzw1I67L9fkE2927C85aUzQY",
+          "url": "https://www.linkedin.com/in/%E5%8F%AF%E5%8D%BF-%E5%88%98-4a1962127",
+          "public_identifier": "%E5%8F%AF%E5%8D%BF-%E5%88%98-4a1962127",
+          "full_name": "刘可卿",
+          "title": "高级工程师 - 北辰（上海）环境科技有限公司",
+          "location": "Minhang District",
+          "is_premium": false,
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAAA68gX4ByFmJIFM82agzKw0ZLIQij8MrOi4",
+        "type": "profile",
+        "content": {
+          "title": "动力事业部副总经理",
+          "url": "https://www.linkedin.com/in/%E6%9D%B0-%E6%96%BD-93a96b6a",
+          "location": "Baoshan District"
+        },
+        "author": {
+          "id": "ACoAAA68gX4ByFmJIFM82agzKw0ZLIQij8MrOi4",
+          "username": "%E6%9D%B0-%E6%96%BD-93a96b6a",
+          "nickname": "施杰",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5603AQFGMGFzcdzlaw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517459448379?e=1767830400&v=beta&t=S9UQrcnLdyYCZ_z2QK5Vc-zEUxpZl3kbimgvO2LWkbA",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "247234942",
+          "urn": "ACoAAA68gX4ByFmJIFM82agzKw0ZLIQij8MrOi4",
+          "url": "https://www.linkedin.com/in/%E6%9D%B0-%E6%96%BD-93a96b6a",
+          "public_identifier": "%E6%9D%B0-%E6%96%BD-93a96b6a",
+          "full_name": "施杰",
+          "title": "动力事业部副总经理",
+          "location": "Baoshan District",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5603AQFGMGFzcdzlaw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517459448379?e=1767830400&v=beta&t=S9UQrcnLdyYCZ_z2QK5Vc-zEUxpZl3kbimgvO2LWkbA",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAAAZCPfIBkinbXxMms3bvIUNBClzLijQ0MTE",
+        "type": "profile",
+        "content": {
+          "title": "航空运输",
+          "url": "https://www.linkedin.com/in/yi-nong-wu-6161ba2b",
+          "location": "Huangpu District"
+        },
+        "author": {
+          "id": "ACoAAAZCPfIBkinbXxMms3bvIUNBClzLijQ0MTE",
+          "username": "yi-nong-wu-6161ba2b",
+          "nickname": "Yi Nong wu",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5603AQGAvICOZ8lHwA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517612955809?e=1767830400&v=beta&t=qL6BdIQA9bYHlcJep4eSIez1QBSNQqaojiQbXafM4mI",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "105004530",
+          "urn": "ACoAAAZCPfIBkinbXxMms3bvIUNBClzLijQ0MTE",
+          "url": "https://www.linkedin.com/in/yi-nong-wu-6161ba2b",
+          "public_identifier": "yi-nong-wu-6161ba2b",
+          "full_name": "Yi Nong wu",
+          "title": "航空运输",
+          "location": "Huangpu District",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5603AQGAvICOZ8lHwA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517612955809?e=1767830400&v=beta&t=qL6BdIQA9bYHlcJep4eSIez1QBSNQqaojiQbXafM4mI",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAABly6VwBQInJWmqPGF6SjIXh7Dtm9VLSMgU",
+        "type": "profile",
+        "content": {
+          "title": "logistic consultant",
+          "url": "https://www.linkedin.com/in/jonathan-john-078ba4ba",
+          "location": "Guangzhou"
+        },
+        "author": {
+          "id": "ACoAABly6VwBQInJWmqPGF6SjIXh7Dtm9VLSMgU",
+          "username": "jonathan-john-078ba4ba",
+          "nickname": "Jonathan john",
+          "avatar": "https://media.licdn.com/dms/image/v2/D5635AQHIkl00EC-hUw/profile-framedphoto-shrink_100_100/B56ZqBUFzZHkAk-/0/1763106119237?e=1766584800&v=beta&t=UjSvSP3RRj3JVyrdV65eeXuIvnIQnIDMF8CN_R3y6yI",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "426961244",
+          "urn": "ACoAABly6VwBQInJWmqPGF6SjIXh7Dtm9VLSMgU",
+          "url": "https://www.linkedin.com/in/jonathan-john-078ba4ba",
+          "public_identifier": "jonathan-john-078ba4ba",
+          "full_name": "Jonathan john",
+          "title": "logistic consultant",
+          "location": "Guangzhou",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/D5635AQHIkl00EC-hUw/profile-framedphoto-shrink_100_100/B56ZqBUFzZHkAk-/0/1763106119237?e=1766584800&v=beta&t=UjSvSP3RRj3JVyrdV65eeXuIvnIQnIDMF8CN_R3y6yI",
+              "expires_at": 1766584800000
+            }
+          ],
+          "services": [
+            "Provides services - Commercial Insurance, Content Marketing, Lead Generation, Demand Generation, Social Media Marketing, Search Engine Marketing (SEM), Search Engine Optimization (SEO), Advertising"
+          ]
+        }
+      },
+      {
+        "platform": "linkedin",
+        "id": "ACoAAAKb-mkBxRX2kTRL3hPOKWubENuSqeycado",
+        "type": "profile",
+        "content": {
+          "title": "General Manager at BOA China",
+          "url": "https://www.linkedin.com/in/baoliang-bob-tao-8357b112",
+          "location": "Shanghai, China"
+        },
+        "author": {
+          "id": "ACoAAAKb-mkBxRX2kTRL3hPOKWubENuSqeycado",
+          "username": "baoliang-bob-tao-8357b112",
+          "nickname": "Baoliang(Bob) Tao",
+          "avatar": "https://media.licdn.com/dms/image/v2/C5103AQE8NWDzq6okdA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1544355465273?e=1767830400&v=beta&t=AR7-AShMFxrB2AAmlthvhkYulAu2S6mFpkETxlvBAGQ",
+          "isPremium": false
+        },
+        "stats": {
+          "services": 1
+        },
+        "rawData": {
+          "id": "43776617",
+          "urn": "ACoAAAKb-mkBxRX2kTRL3hPOKWubENuSqeycado",
+          "url": "https://www.linkedin.com/in/baoliang-bob-tao-8357b112",
+          "public_identifier": "baoliang-bob-tao-8357b112",
+          "full_name": "Baoliang(Bob) Tao",
+          "title": "General Manager at BOA China",
+          "location": "Shanghai, China",
+          "is_premium": false,
+          "avatar": [
+            {
+              "width": 100,
+              "height": 100,
+              "url": "https://media.licdn.com/dms/image/v2/C5103AQE8NWDzq6okdA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1544355465273?e=1767830400&v=beta&t=AR7-AShMFxrB2AAmlthvhkYulAu2S6mFpkETxlvBAGQ",
+              "expires_at": 1767830400000
+            }
+          ],
+          "services": [
+            "1 mutual connection"
+          ]
+        }
+      }
+    ]
+  },
+  "errors": []
+}
