@@ -8,7 +8,7 @@ export class YouTubeSpider extends BasePlatformSpider {
   // 使用 YouTube Web API: search_video
   async searchByTag(tag, limit = 20) {
     const response = await this.http.get('/api/v1/youtube/web/search_video', {
-      params: { search_query: tag }
+      params: { search_query: tag, order_by: 'today' }
     });
     const code = response.data?.code;
     if (code !== 0 && code !== 200) throw new Error(response.data?.message || 'YouTube API error');
