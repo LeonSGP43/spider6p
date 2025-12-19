@@ -180,14 +180,14 @@ class KafkaProducerClient {
             // TikTok: content.title (视频描述)
             // YouTube: content.title 或 rawData.title
             // Instagram: content.title 或 caption
-            // Twitter: text
+            // Twitter: content.text (推文内容)
             // Reddit: title
-            title: post.content?.title || post.title || post.rawData?.title || 
-                   post.text || post.caption || post.name || '',
+            title: post.content?.title || post.content?.text || post.title || 
+                   post.rawData?.title || post.text || post.caption || post.name || '',
             
             // 描述 - 更详细的内容描述
-            description: post.content?.description || post.description || post.desc || 
-                        post.rawData?.description || post.content?.title || '',
+            description: post.content?.description || post.content?.text || post.description || 
+                        post.desc || post.rawData?.description || post.content?.title || '',
             
             // 内容链接 - 重要！
             content_url: post.content?.url || post.url || post.link || post.share_url || '',

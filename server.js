@@ -221,9 +221,9 @@ async function handleRequest(req, res) {
       return;
     }
 
-    // 启动爬取 (使用默认标签)
+    // 启动爬取 (根据 config.useMock 自动选择模式)
     if (path === '/run' && method === 'POST') {
-      const result = await runCrawl();
+      const result = config.useMock ? await runMockCrawl() : await runCrawl();
       sendJson(res, result.success ? 200 : 409, result);
       return;
     }
@@ -243,9 +243,16 @@ async function handleRequest(req, res) {
       return;
     }
 
-    // Mock 模式爬取 (使用已有数据，不消耗 API 费用)
+    // Mock 模式爬取 (强制使用已有数据)
     if (path === '/run/mock' && method === 'POST') {
       const result = await runMockCrawl();
+      sendJson(res, result.success ? 200 : 409, result);
+      return;
+    }
+
+    // 强制真实爬取 (忽略 useMock 配置)
+    if (path === '/run/real' && method === 'POST') {
+      const result = await runCrawl();
       sendJson(res, result.success ? 200 : 409, result);
       return;
     }
@@ -267,15 +274,19 @@ server.listen(PORT, () => {
   console.log('🕷️  Spider6P 爬虫服务器已启动');
   console.log('='.repeat(60));
   console.log(`📡 端口: ${PORT}`);
+  console.log(`🎭 模式: ${config.useMock ? 'Mock (使用本地数据)' : '真实爬取 (消耗 API)'}`);
   console.log(`🏷️  默认标签: ${config.spider.tags.join(', ')}`);
   console.log(`🌐 启用平台: ${Object.entries(config.platforms).filter(([_, c]) => c.enabled).map(([_, c]) => c.name).join(', ')}`);
   console.log('');
   console.log('API 接口:');
-  console.log(`  POST http://localhost:${PORT}/run          - 启动爬取 (消耗 API)`);
-  console.log(`  POST http://localhost:${PORT}/run/tags     - 指定标签爬取 (消耗 API)`);
-  console.log(`  POST http://localhost:${PORT}/run/mock     - 🎭 Mock 模式 (使用已有数据，不消耗 API)`);
+  console.log(`  POST http://localhost:${PORT}/run          - 启动爬取 (${config.useMock ? 'Mock模式' : '真实爬取'})`);
+  console.log(`  POST http://localhost:${PORT}/run/tags     - 指定标签爬取 (强制真实爬取)`);
+  console.log(`  POST http://localhost:${PORT}/run/mock     - 强制 Mock 模式`);
+  console.log(`  POST http://localhost:${PORT}/run/real     - 强制真实爬取`);
   console.log(`  GET  http://localhost:${PORT}/status       - 获取状态`);
   console.log(`  GET  http://localhost:${PORT}/health       - 健康检查`);
+  console.log('');
+  console.log(`💡 切换模式: 修改 config.js 中的 useMock 值`);
   console.log('='.repeat(60));
 });
 

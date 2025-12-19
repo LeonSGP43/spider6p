@@ -2,12 +2,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const config = {
+  // Mock 模式开关
+  // true: 使用本地已有数据，不消耗 API 额度
+  // false: 真实爬取，消耗 API 额度
+  useMock: true,
+  
   tikhub: {
     baseUrl: 'https://api.tikhub.io',
     apiKey: process.env.TIKHUB_API_KEY || ''
   },
   spider: {
-    tags: ['music'],//主要调整这里
+    tags: ['music','dance'],//主要调整这里
     limit: 20,//修改无效，api不支持，设置了也会直接返回默认数量的列表
     concurrency: 6,//忽略
     timeout: 30000,
