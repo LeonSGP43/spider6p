@@ -177,6 +177,11 @@ class KafkaProducerClient {
             author: post.author?.username || post.author || post.user || null,
             description: post.content?.title || post.desc || post.description || post.title || '',
             
+            // 内容链接 - 重要！
+            content_url: post.content?.url || post.url || post.link || post.share_url || '',
+            cover_url: post.content?.coverUrl || post.content?.thumbnailUrl || post.content?.mediaUrl || 
+                       post.cover || post.thumbnail || post.image || '',
+            
             // 互动数据 - 支持多种数据格式
             // 格式1: post.stats.views (spider6p 标准格式)
             // 格式2: post.statistics.play_count (TikHub 原始格式)
