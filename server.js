@@ -110,6 +110,82 @@ async function runCrawl(customTags = null) {
   }
 }
 
+// Mock 模式：使用已有数据发送到 Kafka（不消耗 API 费用）
+async function runMockCrawl() {
+  if (crawlerStatus.running) {
+    return { success: false, message: '爬虫正在运行中，请稍后再试' };
+  }
+
+  crawlerStatus.running = true;
+  crawlerStatus.lastRun = new Date().toISOString();
+
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+    
+    // 查找最新的爬虫数据文件
+    const outputDir = path.default.join(process.cwd(), 'output');
+    if (!fs.default.existsSync(outputDir)) {
+      throw new Error('output 目录不存在，请先运行一次真实爬虫');
+    }
+    
+    const files = fs.default.readdirSync(outputDir)
+      .filter(f => f.startsWith('crawl_') && f.endsWith('.json'))
+      .sort()
+      .reverse();
+    
+    if (files.length === 0) {
+      throw new Error('没有找到爬虫数据文件，请先运行一次真实爬虫');
+    }
+    
+    const latestFile = path.default.join(outputDir, files[0]);
+    console.log(`[Server] 🎭 Mock 模式: 使用数据文件 ${files[0]}`);
+    
+    const content = fs.default.readFileSync(latestFile, 'utf-8');
+    const summary = JSON.parse(content);
+    
+    // 连接 Kafka 并发送数据
+    const connected = await kafkaProducer.connect();
+    if (!connected) {
+      throw new Error('Kafka 连接失败');
+    }
+    
+    const kafkaResult = await kafkaProducer.sendCrawlResults(summary);
+    
+    crawlerStatus.lastResult = {
+      success: true,
+      timestamp: new Date().toISOString(),
+      tags: summary.tags || [],
+      mode: 'mock',
+      sourceFile: files[0],
+      kafkaSent: kafkaResult.sent,
+      platforms: Object.entries(summary.platforms || {}).map(([name, data]) => ({
+        name,
+        success: data.success,
+        count: data.data ? Object.values(data.data).flat().length : 0
+      }))
+    };
+    crawlerStatus.totalRuns++;
+    
+    console.log(`[Server] 🎭 Mock 爬取完成! 发送 ${kafkaResult.sent} 条数据到 Kafka`);
+    return { success: true, message: 'Mock 爬取完成', result: crawlerStatus.lastResult };
+    
+  } catch (error) {
+    console.error(`[Server] Mock 爬取失败:`, error);
+    crawlerStatus.errors.push({
+      time: new Date().toISOString(),
+      message: error.message
+    });
+    if (crawlerStatus.errors.length > 10) {
+      crawlerStatus.errors = crawlerStatus.errors.slice(-10);
+    }
+    return { success: false, message: 'Mock 爬取失败', error: error.message };
+    
+  } finally {
+    crawlerStatus.running = false;
+  }
+}
+
 // HTTP 请求处理
 async function handleRequest(req, res) {
   const url = new URL(req.url, `http://localhost:${PORT}`);
@@ -167,6 +243,13 @@ async function handleRequest(req, res) {
       return;
     }
 
+    // Mock 模式爬取 (使用已有数据，不消耗 API 费用)
+    if (path === '/run/mock' && method === 'POST') {
+      const result = await runMockCrawl();
+      sendJson(res, result.success ? 200 : 409, result);
+      return;
+    }
+
     // 404
     sendJson(res, 404, { error: 'Not Found', path });
 
@@ -188,8 +271,9 @@ server.listen(PORT, () => {
   console.log(`🌐 启用平台: ${Object.entries(config.platforms).filter(([_, c]) => c.enabled).map(([_, c]) => c.name).join(', ')}`);
   console.log('');
   console.log('API 接口:');
-  console.log(`  POST http://localhost:${PORT}/run          - 启动爬取`);
-  console.log(`  POST http://localhost:${PORT}/run/tags     - 指定标签爬取`);
+  console.log(`  POST http://localhost:${PORT}/run          - 启动爬取 (消耗 API)`);
+  console.log(`  POST http://localhost:${PORT}/run/tags     - 指定标签爬取 (消耗 API)`);
+  console.log(`  POST http://localhost:${PORT}/run/mock     - 🎭 Mock 模式 (使用已有数据，不消耗 API)`);
   console.log(`  GET  http://localhost:${PORT}/status       - 获取状态`);
   console.log(`  GET  http://localhost:${PORT}/health       - 健康检查`);
   console.log('='.repeat(60));
