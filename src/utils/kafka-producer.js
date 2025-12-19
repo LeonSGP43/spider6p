@@ -175,7 +175,19 @@ class KafkaProducerClient {
             // 帖子数据
             post_id: post.id || post.aweme_id || post.video_id || null,
             author: post.author?.username || post.author || post.user || null,
-            description: post.content?.title || post.desc || post.description || post.title || '',
+            
+            // 标题 - 各平台字段名不同
+            // TikTok: content.title (视频描述)
+            // YouTube: content.title 或 rawData.title
+            // Instagram: content.title 或 caption
+            // Twitter: text
+            // Reddit: title
+            title: post.content?.title || post.title || post.rawData?.title || 
+                   post.text || post.caption || post.name || '',
+            
+            // 描述 - 更详细的内容描述
+            description: post.content?.description || post.description || post.desc || 
+                        post.rawData?.description || post.content?.title || '',
             
             // 内容链接 - 重要！
             content_url: post.content?.url || post.url || post.link || post.share_url || '',
