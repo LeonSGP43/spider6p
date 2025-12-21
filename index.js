@@ -135,6 +135,7 @@ async function saveResults(summary) {
 
 // 导出供外部使用
 export { crawlAll, spiders, config };
+export { fetchConfigFromBackend } from './config.js';
 
 // 直接运行
 if (process.argv[1].endsWith('index.js')) {

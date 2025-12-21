@@ -14,7 +14,7 @@
  */
 
 import http from 'http';
-import { crawlAll, config } from './index.js';
+import { crawlAll, config, fetchConfigFromBackend } from './index.js';
 import { kafkaProducer } from './src/utils/kafka-producer.js';
 
 const PORT = process.env.SPIDER_PORT || 8001;
@@ -254,6 +254,35 @@ async function handleRequest(req, res) {
     if (path === '/run/real' && method === 'POST') {
       const result = await runCrawl();
       sendJson(res, result.success ? 200 : 409, result);
+      return;
+    }
+
+    // 刷新配置（从后端重新拉取）
+    if (path === '/config/refresh' && method === 'POST') {
+      const success = await fetchConfigFromBackend();
+      sendJson(res, 200, {
+        success,
+        message: success ? '配置已刷新' : '刷新失败，使用本地配置',
+        config: {
+          tags: config.spider.tags,
+          useMock: config.useMock,
+          platforms: Object.entries(config.platforms)
+            .filter(([_, c]) => c.enabled)
+            .map(([_, c]) => c.name)
+        }
+      });
+      return;
+    }
+
+    // 获取当前配置
+    if (path === '/config' && method === 'GET') {
+      sendJson(res, 200, {
+        tags: config.spider.tags,
+        useMock: config.useMock,
+        limit: config.spider.limit,
+        requestDelay: config.spider.requestDelay,
+        platforms: config.platforms
+      });
       return;
     }
 
