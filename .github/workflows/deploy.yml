@@ -1,0 +1,35 @@
+name: Deploy Spider
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          script: |
+            cd ${{ secrets.DEPLOY_PATH }}/spider6p
+            
+            # 拉取最新代码
+            git pull origin main
+            
+            # 安装依赖
+            npm ci
+            
+            # 重启服务
+            pm2 restart spider6p || pm2 start server.js --name spider6p
+            
+            echo "✅ Spider deployed successfully"
